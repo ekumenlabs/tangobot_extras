@@ -2,21 +2,21 @@
 This package helps to install and run a standard turtlebot using a laptop (tested on Ubuntu 16.04 and ROS Kinetic) and a Kinect v1 sensor optionally. The default setup uses an empty map to navigate without AMCL.
 
 ## Installation
-Clone [tangobot repository](https://github.com/ekumenlabs/tangobot) into a workspace folder. For example:
+Clone [tangobot extras repository](https://github.com/ekumenlabs/tangobot_extras) into a workspace folder. For example:
 ```
-mkdir -p ~/tangobot_ws/src
-cd ~/tangobot_ws/src
-git clone https://github.com/ekumenlabs/tangobot
+mkdir -p ~/tangobot_extras_ws/src
+cd ~/tangobot_extras_ws/src
+git clone https://github.com/ekumenlabs/tangobot_extras
 ```
 Install all the package dependencies in case you don't have all the turtlebot dependencies installed already:
 ```
-cd ~/tangobot_ws/src/tangobot/std_turtlebot
+cd ~/tangobot_extras_ws/src/tangobot_extras/std_turtlebot
 sudo apt-get update
 rosdep install -r std_turtlebot
 ```
 Finally, build this package and source the workspace script:
 ```
-cd ~/tangobot_ws
+cd ~/tangobot_extras_ws
 catkin_make --pkg std_turtlebot
 source devel/setup.bash
 ```
